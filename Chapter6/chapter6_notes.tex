@@ -1,0 +1,48 @@
+\documentclass[a4paper]{article}
+
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+
+
+\geometry{a4paper,left=15mm,right=15mm,top=20mm,bottom=20mm}
+\pagestyle{fancy}
+\lhead{Felipe Costa}
+\chead{Reinforcement Learning Algorithms with Python}
+\rhead{\today}
+\cfoot{\thepage}
+
+\setlength{\headheight}{23pt}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.0in}
+
+\begin{document}
+
+\section*{Notes - Chapter 6}
+
+%\vspace{0,75cm}
+
+\subsection*{Policy Gradient Methods}
+%\vspace{0,75cm}
+\hspace{0,75cm}Policy Gradient (PG) algorithms exhibit incredible potential in enviroments with a large number of actions or when the action space is continuous.
+
+\hspace{0,75cm}The objective of RL is to maximize the expected return of a trajectory. The objective function can then be expressed as:\\
+\begin{equation}
+J(\theta) = \mathbb{E}_{\tau \sim \pi_{\theta}}[R(\tau)]
+\end{equation}\
+
+Where $\theta$ is the parameter of the policy, such as the trainable variables of a deep neural network.
+
+\hspace{0,75cm}In PG methods, the maximization of the objective function is done through the gradient of the objective function $\nabla_{\theta}J(\theta)$. Using gradient ascent, we can improve $J(\theta)$ by moving the parameters toward the direction of the gradient, as the gradient points in the direction in which the function increases.
+
+\hspace{0,75cm}Using equation $(1)$, the gradient of the objective function is defined as follows:
+
+\begin{equation}
+\nabla_{\theta}J(\theta) = \nabla_{\theta}\mathbb{E}_{\tau \sim \pi_{\theta}}[R(\tau)]
+\end{equation}
+
+\end{document}
