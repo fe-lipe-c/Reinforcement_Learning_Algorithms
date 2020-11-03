@@ -1,2 +1,2 @@
-model_checkpoint_path: "ddqn_pong"
-all_model_checkpoint_paths: "ddqn_pong"
+model_checkpoint_path: "enforce_nn"
+all_model_checkpoint_paths: "enforce_nn"
